@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Form Validation</title>
+
+  <style>
+    body{
+      padding: 10px 50px;
+    }
+    .formdesign{
+      font-size: 20px;
+
+    }
+    .formdesign input{
+      width: 50%;
+      padding: 12px 20px;
+      border: 1px solid blue;
+      margin: 40px;
+      border-radius: 4px;
+      font-size: 15px;
+
+    }
+    .formerror{
+      color: red;
+    
+    
+    }
+    .but{
+      border-radius: 5px;
+      width: 100px;
+      height: 30px;
+      font-size: 20px;
+      margin: 22px 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  Welcome to the Best Form Validation
+  <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+    <div class="formdesign" id="name">
+
+      Name: <input type="text" name="fname" id=""> <span class="formerror"><b></b> </span>
+    </div>
+    <div class="formdesign" id="name">
+
+      Email: <input type="email" name="femail" id=""> <span class="formerror"><b></b> </span>
+    </div>
+    <div class="formdesign" id="name">
+
+      Phone: <input type="text" name="fphone" id=""> <span class="formerror"><b></b> </span>
+    </div>
+  </form>
+    <div class="formdesign" id="name">
+
+      Password: <input type="password" name="fpass" id=""> <span class="formerror"><b></b> </span>
+    </div>
+    <div class="formdesign" id="name">
+
+     Conform Password: <input type="password" name="fcpass" id=""> <span class="formerror"><b></b> </span>
+    </div>
+
+    <!-- <button class="but" type="submit" value="submit">Submit</button>  -->
+
+  <!-- button Banane k 2tarike ek upar vala our ek niche Vals -->
+
+    <input class="but" type="button"  value="submit" id="">
+
+  </form>
+</body>
+<script>
+  function seterror(id,error) {
+    var name = document.forms('myForm')["fname"].value;
+    // console.log(name);
+    
+    // perform validation and if validation fails, set the value of returnval to false
+    
+    if (name.length == 0){
+      seterror("name", "Length of name cannot be zero");
+      returnval = false;
+    }
+
+    
+    if (name.length<5){
+      seterror("name", "Length of name is too short");
+      returnval = false;
+    }
+    
+
+   return returnval; 
+  }
+</script>
+</html>

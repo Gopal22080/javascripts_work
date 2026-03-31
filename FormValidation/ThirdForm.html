@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="ThirdForm.css">
+</head>
+<body>
+  <div class="containar" id="containar">
+    <div class="form-containar sign-up-containar">
+      <form action="">
+        <h1>
+          Registration
+        </h1>
+        <input type="text" name="" id="RegistarForm" placeholder="User Name">
+        <input type="email" name="" id="" placeholder="email">
+        <input type="password" name="" id="" placeholder="password">
+        <button>Registar</button>
+      </form>
+    </div>
+
+
+
+    <div class="form-containar sign-in-containar">
+      <form action="">
+        <h1>Login</h1>
+       <input type="text" name="" id="loginForm" placeholder="User Name">
+       <input type="password" name="" id="" placeholder="password">
+       <a href="#">Forgot password?</a>
+       <button>Login</button>
+      </form>
+    </div>
+
+
+    <div class="overlay-containar">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>
+            Welcome Back Brow!
+
+          </h1>
+          <p>Already have an account?</p>
+          <button class="ghost" id="signIn">Login</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+            <h1>Hellow Welcome!</h1>
+            <p>To stay connected, please login with your details</p>
+            <button class="ghost" id="signUp">Registar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // const containar = document.getElementById('container');
+  // document.getElementById('sign-up').addEventListener('click',() =>{
+  //   containar.classList.add("right-panel-active");
+
+  // });
+
+  // document.getElementById('signIn').addEventListener('click',() =>{
+  //   containar.classList.remove("right-panel-active");
+  // });
+
+  const container = document.getElementById("continer");
+  const loginForm = document.getElementById("LoginForm");
+  const RegistarForm = document.getElementById("RegistarForm");
+  const overlay = document.getElementById("overlay");
+
+function showRegister(){
+  container.classList.add('move');
+  loginForm.style.left = "-100%";
+  RegistarForm.style.left = "0";
+  overlay.innerHTML='<h2>Already have an account?</h2> <button onclick = "showLogin()">Login</button>'
+}  
+
+</script>
+</html>

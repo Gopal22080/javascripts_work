@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.one{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-top: 20px solid rgb(208, 235, 7);
+    box-shadow: 0 0 15px yellow;
+    animation: rotate1 infinite 5s;
+}
+@keyframes rotate1 {
+    0%{
+        transform: rotate(0deg);
+        border-top:20px solid yellow;
+    }
+    25%{
+        transform: rotate(25);
+    }
+
+}

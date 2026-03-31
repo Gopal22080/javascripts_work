@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: brown;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease;   
+}
+input{
+    margin: 10px;
+    padding: 10px;
+    font-size: 10px;
+    
+}
+button{
+    margin: 5px;
+    padding: 5px 10px;
+
+}
+#keyDisplay{
+    font-weight: bold;
+    margin: 20px;
+}
+</style>
+
+<body>
+    <H1>ONKEY UP</H1>
+    <input  id="text1"  type="text" onkeyup="kUP(event)" placeholder="keyUp" >
+    <button onclick="resetField('text1')">Reset</button>
+
+    
+
+    <h1>ONKEY DOWN</h1>
+    <input  id="text2"  type="text" onkeydown="kDown(event)" placeholder=" Key Down" >
+    <button onclick="resetField('text2')">Reset</button>
+
+
+
+    <h1>ONKEY PRESS</h1>
+    <input  id="text3"  type="text" onkeypress="kPress(event)" placeholder=" Key Press" >
+    <button onclick="resetField('text3')">Reset</button>
+
+    <h1>3in ONE</h1>
+    <input type="text4" type="text" onkeyup="kDown(event)" onkeypress="kPress(event)" >
+    <button onclick="resetField('text4')">Reset</button>
+
+    <h1>Last Key:None </h1>
+    <button onclick="toogleTheme()">Toggle Light/Dark Theme</button>
+
+
+
+
+    <script>
+        function kUP(e){
+           let text = document.getElementById('text1');
+            text1.style.backgroundColor = "cyan";
+            showKey(e.key);
+        }
+        function kDown(e){
+            let text2 = document.getElementById('text2');
+            text2.style.backgroundColor = "lime";
+            showKey(e.key);
+        }
+        function kPress(e){
+            let text3 = document.getElementById('text3');
+            text3.style.backgroundColor = "red";
+            showKey(e.key);
+        }
+        function keyUp(e) {
+            let text = document.getElementById('text4');
+            text.style.background = "cyan";
+            showKey(e.key);
+        }
+        function kDown(e){
+            let text = document.getElementById('text4');
+            text.style.backgroundColor = "lime";
+            showKey(e.key);
+        }
+        function kPress(e){
+            let text = document.getElementById('text4');
+            text.style.backgroundColor = "red";
+            showKey(e.key);
+        }
+
+
+
+
+
+
+        function resetField(id){
+            let text = document.getElementById(id);
+            text.value = "";
+            text.style.background = "white";
+
+        }
+        function showKey(key) {
+            document.getElementById('keyDisplay').textContent = "Last Key:" + key;
+        }
+        function toogleTheme(){
+            const body = document.body;
+            if(body.style.backgroundColor = 'white') {
+                body.style.Color = 'black';
+
+            } else{
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            background-color:black;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+
+        }
+
+        button{
+            padding: 30px  100px;
+            font-size: 15px;
+            border-radius: 55px;
+            box-shadow: 0 0 15px white;
+
+        }
+        button:hover{
+            background-color:gray;
+            box-shadow: 0 0 15px rgb(124, 118, 118);
+        }
+    </style>
+    <script>
+        function Mup(){
+            alert('This is from Mouse UP');
+        }
+        function Mdown(){
+            alert('This is from Mouse Down');
+        }
+        function Menter(){
+            alert('This is from Mouse Enter');
+        }
+        function Mleave(){
+            alert('This is from Mouse Enter');
+        }
+        function Mmove(){
+            alert('This is from Mouse Move');
+        }
+        function Mout(){
+            alert('This is from Mouse Out');
+        }
+        function Mover(){
+            alert('This is from Mouse Over');
+        }
+        function Mwheel(){
+            alert('This is from Mouse Wheel/Scroll');
+        }
+
+    </script>
+</head>
+<body>
+    <button onmouseup="Mup()">MouseUp</button>
+    <button onmousedown="Mdown()">MouseDown</button>
+    <button onmouseenter="Menter()">MouseEnter</button>
+    <button onmouseleave="Mleave()">MouseLeave</button>
+    <button onmousemove="Mmove()">MouseMove</button>
+    <button onmouseout="Mout()">MouseOut</button>
+    <button onmouseover="Mover()">MouseOver</button>
+    <button onmousewheel="Mwheel()">Mouse Wheel/Scroll</button> <!--Mouse Koo Scroll karnaa padtaa he.-->
+    
+
+</body>
+</html>

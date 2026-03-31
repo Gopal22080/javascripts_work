@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <Script>
+        function confirmfunc(){
+            let ask = confirm('Are YOU Rady');
+            if(ask == true){
+                document.getElementById('Display').innerText = "You Clicked OK";
+            }else{
+                document.getElementById('Display').innerText = "You Clicked CANCLE";
+            }
+        }
+        function confirmfunc1(){
+            let ask = confirm('Yes Remove');
+            if(ask == true){
+                document.getElementById('Display').innerText = "You Clicked OK";
+            }else{
+                document.getElementById('Display').innerText = "You Clicked CANCLE";
+            }
+        }
+        function confirmfunc2(){
+            let ask = confirm('No I Am Not Sure');
+            if(ask == true){
+                document.getElementById('Display').innerText = "You Clicked OK";
+            }else{
+                document.getElementById('Display').innerText = "You Clicked CANCLE";
+            }
+        }
+        function promptfunc(){
+            let val = ("Enter Your Name",'User');
+            document.getElementById('Display').innerText = "Hey : " + val
+        }
+    </Script>
+</head>
+
+<body>
+   <h1>Alart Box</h1>
+   <button onclick="alert('This is the Alart Box!!!!')">Alart</button> 
+
+   <h4>Don't Enter</h4>
+   <button onclick="alert('This Is A Alart box Please Dont Enter')">Dont't Enter</button>
+
+   <h4>Enter</h4>
+   <button onclick="alert('This Box Is Fake!!!')"> Enter</button>
+
+   <h1>Confirm Box</h1>
+   <button onclick="confirmfunc()" >Confirm</button>
+
+   <h4>Your Account Will Be Deleted Permanently!!!</h4>
+    <button onclick="confirmfunc1()">Yes, Remove My Account</button>
+    <button onclick="confirmfunc2()">No, I am not sure!</button>
+
+
+   <h1> Prompt Box </h1>
+   <button onclick="promptfunc()" >Prompt </button>
+
+   <p id="Display">Your Display Hare</p>
+</body>
+</html>

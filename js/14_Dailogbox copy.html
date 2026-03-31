@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function confirmfunc() {
+            let ask = confirm("Are You Rady");
+            if(ask == true){
+                document.getElementById('Display').innerText = "You Clicked OK";
+            }else{
+                document.getElementById('Display').innerText = "You Clicked CANCEL";
+                
+            }
+    
+        }
+        function promptfunc(){
+            let val = ("Enter Your Name",'Gopu!!');
+
+            document.getElementById('Display').innerText = "Hey : " + val;    
+         }
+    </script>
+</head>
+<body>
+    
+    
+    <h1>Alart Box</h1>
+    <button onclick="alert('This Is The AlartBox!!!')">Alart</button>
+    
+    <h1>Confirm Box</h1>
+    <button onclick="confirmfunc()">Confirm</button>
+    
+    <h1>Prompt Box</h1>
+    <button onclick="promptfunc()">Prompt</button>
+    
+    <p id="Display" >Your Display Hare </p>
+</body>
+
+</html>
+
